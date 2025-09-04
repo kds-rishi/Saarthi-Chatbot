@@ -1,0 +1,6 @@
+*.env
+*.pyc
+*.csv
+*.txt
+*.sqlite
+*.python-version
