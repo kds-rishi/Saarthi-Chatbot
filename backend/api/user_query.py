@@ -11,7 +11,7 @@ class QueryRequest(BaseModel):
 
 router = APIRouter()
 
-@router.get("/scrape")
+@router.post("/user-input")
 def query_docs(request: QueryRequest):
     """
     Takes a user query and returns top 3 relevant chunks from vector DB.
