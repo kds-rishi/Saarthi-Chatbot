@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api import scraper, user_query
+from backend.api import scraper, user_query
 
 app = FastAPI(
     title="KDS Chatbot",
@@ -18,7 +18,7 @@ app.add_middleware(
 
 
 app.include_router(scraper.router, prefix="/api", tags=["Scraper"])
-app.include_router(user_query.router, prefix="/api", tags=["Scraper"])
+app.include_router(user_query.router, prefix="/api", tags=["User Input"])
 
 @app.get("/")
 def root():

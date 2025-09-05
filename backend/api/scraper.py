@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query
 import pandas as pd
-from utils.text_scraper import text_scraper
-from utils.embeddings import store_embeddings
+from backend.utils.text_scraper import text_scraper
+from backend.utils.embeddings import store_embeddings
 
 router = APIRouter()
 
